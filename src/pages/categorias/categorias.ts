@@ -24,8 +24,6 @@ export class CategoriasPage {
       res => {
         this.items = res;
       },
-      error => {
-        console.log('Error: ', error);
-      })
+      error => {})
   }
 }
