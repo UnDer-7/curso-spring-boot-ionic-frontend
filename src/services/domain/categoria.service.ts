@@ -6,11 +6,12 @@ import { Observable } from "rxjs/Rx";
 
 @Injectable()
 export class CategoriaService{
+    searchUrl: string =  `${API_CONFIG.baseUrl}/categorias`;
     constructor(
         public http: HttpClient
     ){}
 
     public findAll(): Observable<CategoriaDTO[]>{
-        return this.http.get<CategoriaDTO[]>(`${API_CONFIG.baseUrl}/categorias`);
+        return this.http.get<CategoriaDTO[]>(this.searchUrl);
     }
 }
